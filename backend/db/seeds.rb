@@ -1,9 +1,20 @@
-# This file should ensure the existence of records required to run the application in every environment (production,
-# development, test). The code here should be idempotent so that it can be executed at any point in every environment.
-# The data can then be loaded with the bin/rails db:seed command (or created alongside the database with db:setup).
-#
-# Example:
-#
-#   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
-#     MovieGenre.find_or_create_by!(name: genre_name)
-#   end
+# Create 3 sample tasks
+Task.create!(
+  title: "Complete Ruby on Rails assignment",
+  description: "Implement a Task Manager API with Rails",
+  completed: false
+)
+
+Task.create!(
+  title: "Learn React",
+  description: "Complete React frontend tutorial",
+  completed: true
+)
+
+Task.create!(
+  title: "Buy groceries",
+  description: "Milk, eggs, bread, and vegetables",
+  completed: false
+)
+
+puts "Sample tasks created successfully!"
